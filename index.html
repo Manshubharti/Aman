@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBD ✨</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at center, #1e1e2f 0%, #0f0f1a 100%);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 24px;
+            text-align: center;
+            max-width: 350px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            transform: scale(0.9);
+            animation: popIn 0.6s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
+        }
+
+        @keyframes popIn {
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #ffecd2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border:dashed;
+            border-width:3px;
+            border-image:linear-gradient(45deg,#ff4d6d,#ff9a9e,#a8edea,#fed6e3) 1;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #b0b0b0;
+            margin-top: 20px;
+            line-height: 1.5;
+        }
+
+        .btn {
+            margin-top: 30px;
+            padding: 12px 24px;
+            background: transparent;
+            border: 1px solid #ff9a9e;
+            color: #ff9a9e;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #ff9a9e;
+            color: #1e1e2f;
+            box-shadow: 0 0 20px rgba(255, 154, 158, 0.4);
+        }
+
+        #hidden-msg {
+            display: none;
+            margin-top: 20px;
+            font-style: italic;
+            color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="glass-card">
+        <h1>Happy Birthday.<br> Aman</h1>
+        <p>I was going to write something poetic, but I think "You're awesome" covers it pretty well.</p>
+        
+        <a href="https://manshubharti.github.io/Aman-sharma/">
+        <button class="btn">Click for a Secret</button>
+        </a>
+    </div>
+
+    <script>
+        // Trigger confetti on load
+        window.onload = () => {
+            confetti({
+                particleCount: 2000,
+                spread: 70,
+                origin: { y: 0.6 },
+                colors: ['#ff9a9e', '#fad0c4', '#ffffff']
+            });
+        };
+
+        function reveal() {
+            const msg = document.getElementById('hidden-msg');
+            msg.style.display = 'block';
+            // Extra confetti for the reveal
+            confetti({
+                particleCount: 50,
+                scalar: 2,
+                emoji: ['✨', '🎂', '💖']
+            });
+        }
+    </script>
+</body>
+</html>
+:0;
+        }
+        }
+        
+        
+        .particle{
+        position:absolute;
+        width:8px;
+        height:8px;
+        border-radius:50%;
+        pointer-events:none;
+        animation:firework 1.2s linear forwards;
+        }
+        
+        @keyframes firework{
+        
+        0%{
+        transform:translate(0,0) scale(1);
+        opacity:1;
+        }
+        
+        100%{
+        transform:translate(var(--x),var(--y)) scale(0);
+        opacity:0;
+        }
+        
+    </style>
+</head>
+<body>
+
+<audio id="music">
+	<source src="apna.mp3" type="audio/mpeg">
+</audio>
+
+    <div class="content">
+        <span class="date">10 March 2026</span>
+        <h1 class="typing-text">Happy Birthday.<br>Mere Param Mittar<br>(Aman)</h1>
+        <div class="message">
+            Happy Birthday to someone who makes my every day a little brighter 🌸<br>
+            You are my one and only favourite person😌<br>
+            And i don't want to loose you😢<br>
+            May your life be full of happiness, success, and beautiful moments.
+            Keep smiling always 😊
+        </div>
+        <button onclick="toggleAudio()" id="tapBtn">Tap here!</button>
+    </div>
+
+    <script>
+        // Generate subtle background dots
+        for (let i = 0; i < 30; i++) {
+            let dot = document.createElement('div');
+            dot.className = 'dot';
+            let size = Math.random() * 3 + 'px';
+            dot.style.width = size;
+            dot.style.height = size;
+            dot.style.top = Math.random() * 100 + 'vh';
+            dot.style.left = Math.random() * 100 + 'vw';
+            document.body.appendChild(dot);
+        }
+        
+        let audio = document.getElementById("music")
+    	audio.currentTime = 18;
+    	
+    	function toggleAudio() {
+    		if (audio.paused) {
+    			audio.play();
+    		} else {
+    		   audio.pause();
+    		}
+    	}	
+    	
+    	/* hearts generator */
+    	
+    	setInterval(()=>{
+    	
+    	let heart = document.createElement("div");
+    	heart.className = "heart";
+    	heart.innerHTML = "❤";
+    	
+    	heart.style.left = Math.random()*100 + "vw";
+    	heart.style.fontSize = (Math.random()*20+10) + "px";
+    	heart.style.animationDuration = (Math.random()*3+4) + "s";
+    	
+    	document.body.appendChild(heart);
+    	
+    	setTimeout(()=>{
+    	heart.remove();
+    	},6000);
+    	
+    	},500);
+    	
+    	document.addEventListener("click",function(e){
+    	
+    	for(let i=0;i<50;i++){
+    	
+    	let particle=document.createElement("span");
+    	particle.classList.add("particle");
+    	
+    	let x=(Math.random()-0.5)*200+"px";
+    	let y=(Math.random()-0.5)*200+"px";
+    	
+    	particle.style.setProperty("--x",x);
+    	particle.style.setProperty("--y",y);
+    	
+    	particle.style.left=e.clientX+"px";
+    	particle.style.top=e.clientY+"px";
+    	
+    	document.body.appendChild(particle);
+    	
+    	setTimeout(()=>{
+    	particle.remove();
+    	},800);
+    	
+    	}
+    	
+    	});
+    	
+    	
+    	
+    	
+    	const btn = document.getElementById("tapBtn");
+    	
+    	btn.addEventListener("click", function(){
+    	
+    	const colors = ["#ff4d4d","#ffd700","#00ffff","#ff00ff","#00ff7f","#ffffff"];
+    	
+    	for(let i=0;i<150;i++){   // more fireworks
+    	
+    	let particle = document.createElement("span");
+    	particle.classList.add("particle");
+    	
+    	let startX = Math.random()*window.innerWidth;
+    	let startY = Math.random()*window.innerHeight;
+    	
+    	let moveX = (Math.random()-0.5)*300+"px";
+    	let moveY = (Math.random()-0.5)*300+"px";
+    	
+    	particle.style.left = startX+"px";
+    	particle.style.top = startY+"px";
+    	
+    	particle.style.setProperty("--x",moveX);
+    	particle.style.setProperty("--y",moveY);
+    	
+    	particle.style.background = colors[Math.floor(Math.random()*colors.length)];
+    	
+    	document.body.appendChild(particle);
+    	
+    	setTimeout(()=>{
+    	particle.remove();
+    	},1200);
+    	
+    	}
+    	
+    	});
+    </script>
+</body>
+</html>
